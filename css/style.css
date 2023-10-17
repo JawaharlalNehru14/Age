@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil&display=swap');
+li{list-style-type:none!important;}
+a{text-decoration:none!important;}
+html{scroll-behavior: smooth;}
+.rale{font-family: 'Patua One', cursive;}.robo{font-family: 'Roboto', sans-serif;}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    cursor: pointer;
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transition: transform 0.3s;
+  }
+  
+  .collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+  }
+  
+  /* When the checkbox is checked, change the rotation to 45 degrees and reveal the content */
+  .collapse-checkbox:checked ~ .arrow {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  
+  
+  .collapse-checkbox:checked ~ .collapse-content {
+    max-height: 1000px; /* A large value to ensure it covers the content height */
+  }
+  
+  
